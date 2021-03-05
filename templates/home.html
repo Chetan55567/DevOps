@@ -1,13 +1,48 @@
-{% extends 'base.html' %}
-{% block content %}
-
-<h1>Hello {{name}}!!!</h1>
-
-<form action="add" method="post">
-    {% csrf_token %}
-    Enter 1st Number: <input type="text" name="num1"> <br>
-    Enter 2nd Number: <input type="text" name="num2"> <br>
-    <input type="submit">
-</form>
-
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+            color:darkslateblue;
+            font-size: 50px;
+        }
+        form{
+            text-align: center;
+        }
+        .one{
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        body{
+            background-color: grey;
+        }
+        span{
+            font-size: 30px;
+            color: lawngreen;
+        }
+        #letter{
+            position: relative;
+            left: 2px;
+        }
+        #button{
+            font-size: 20px;
+            margin-right: 10px;
+            margin-top: 50px;
+        }
+        #uni{
+            position: relative;
+            right: 7px;
+        }
+        </style>
+    </head>
+    <body>
+        <marquee direction="right" scrolldelay="10s"><h1 style="text-align: center;">Hello {{name}}!!!</h1></marquee>
+        <form action="add" method="post">
+            {% csrf_token %}
+            <span>Enter 1st Number: </span><input class="one" type="text" name="num1" placeholder="Enter the first number"> <br><br>
+            <span id="letter">Enter 2nd Number: </span><input id="uni" class="one" type="text" name="num2" placeholder="Enter tthe second number"> <br><br>
+            <input id="button" type="submit">
+            <input id="button" type="reset">
+        </form> 
+    </body>
+</html>
