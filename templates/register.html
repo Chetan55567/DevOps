@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        form{
+            text-align: center;
+            margin-top: 80px;
+        }
+        input{
+           font-size: x-large;
+           margin: 5px;
+        }
+        #sub{
+            background-color: darkorange;
+        }
+    </style>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Register</title>
@@ -17,7 +30,7 @@
         <input type="email" name="email" placeholder="Email"><br>
         <input type="password" name="password1" placeholder="Password"><br>
         <input type="password" name="password2" placeholder="Confirm Password"><br>
-        <input type="submit">
+        <input type="submit" id="sub">
     </form>
     <div>
         {% for message in messages %}
